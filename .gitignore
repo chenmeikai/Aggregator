@@ -16,3 +16,14 @@ weixin/kenhome-common/.classpath
 weixin/kenhome-client/.project
 weixin/kenhome-client/.classpath
 weixin/.project
+weixin/kenhome-mobile/target/
+weixin/kenhome-mobile/.settings/
+weixin/.settings/
+weixin/.factorypath
+weixin/.classpath
+weixin/kenhome-mobile/huisheng.log
+weixin/kenhome-mobile/.project
+weixin/kenhome-mobile/.factorypath
+weixin/kenhome-mobile/.classpath
+weixin/kenhome-manager/.factorypath
+weixin/kenhome-client/.factorypath

@@ -10,7 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.chenmeikai.util.WeixinUtils;
+import com.chenmeikai.util.WeixinCheckUtils;
 
 /**
  * 微信公众号校验
@@ -35,7 +35,7 @@ public class WeixinVilidataController {
 
 		String echostr = request.getParameter("echostr");
 
-		if (WeixinUtils.checkSignature(signature, timestamp, nonce)) {
+		if (WeixinCheckUtils.checkSignature(signature, timestamp, nonce)) {
 			// 如果校验成功，将得到的随机字符串原路返回
 			return echostr;
 		}

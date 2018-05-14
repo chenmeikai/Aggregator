@@ -3,9 +3,9 @@ package com.chenmeikai.util;
 import java.security.MessageDigest;
 import java.util.Arrays;
 
-public class WeixinUtils {
+public class WeixinCheckUtils {
 
-	public static final String tooken = "jredu100"; // 开发者自行定义Tooken
+	public static final String tooken = "kenhome"; // 开发者自行定义Tooken
 
 	public static boolean checkSignature(String signature, String timestamp, String nonce) {
 
