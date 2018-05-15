@@ -27,3 +27,7 @@ weixin/kenhome-mobile/.factorypath
 weixin/kenhome-mobile/.classpath
 weixin/kenhome-manager/.factorypath
 weixin/kenhome-client/.factorypath
+*.class
+weixin/kenhome-client/bin/
+weixin/kenhome-common/bin/
+weixin/kenhome-manager/bin/
