@@ -31,5 +31,18 @@ public class HelloWorldController {
 		
 		return result;
 	}
+	
+	@RequestMapping("upstream")
+	@ResponseBody
+	public Map<String,Object> upstream(HttpServletRequest request,HttpServletResponse response) {
+		
+		Map<String,Object> result =new HashMap<>();
+		
+		
+		result.put("code", 200);
+		result.put("desc", "这是8080端口");
+		
+		return result;
+	}
 
 }
