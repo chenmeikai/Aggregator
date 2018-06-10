@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: kenhome-mobile
+Implementation-Version: 1.0
+Built-By: Administrator
+Implementation-Vendor-Id: com.chenmeikai
+Build-Jdk: 1.8.0_162
+Implementation-URL: http://www.chenmeikai.com
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

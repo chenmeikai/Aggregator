@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.chenmeikai</groupId>
-	<artifactId>weixin</artifactId>
+	<artifactId>aggregator</artifactId>
 	<version>1.0</version>
 	<packaging>pom</packaging>
 
 	<name>kenhome</name>
-	<description>WeChat Official Accounts</description>
+	<description>Aggregator project</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
