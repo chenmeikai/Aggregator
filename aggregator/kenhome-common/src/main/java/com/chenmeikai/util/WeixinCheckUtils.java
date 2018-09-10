@@ -5,83 +5,83 @@ import java.util.Arrays;
 
 public class WeixinCheckUtils {
 
-	public static final String tooken = "kenhome"; // 开发者自行定义Tooken
+    public static final String tooken = "kenhome"; // 开发者自行定义Tooken
 
-	public static boolean checkSignature(String signature, String timestamp, String nonce) {
+    public static boolean checkSignature(String signature, String timestamp, String nonce) {
 
-		// 1.定义数组存放tooken，timestamp,nonce
+        // 1.定义数组存放tooken，timestamp,nonce
 
-		String[] arr = { tooken, timestamp, nonce };
+        String[] arr = {tooken, timestamp, nonce};
 
-		// 2.对数组进行排序
+        // 2.对数组进行排序
 
-		Arrays.sort(arr);
+        Arrays.sort(arr);
 
-		// 3.生成字符串
+        // 3.生成字符串
 
-		StringBuffer sb = new StringBuffer();
+        StringBuffer sb = new StringBuffer();
 
-		for (String s : arr) {
+        for (String s : arr) {
 
-			sb.append(s);
+            sb.append(s);
 
-		}
+        }
 
-		// 4.sha1加密
+        // 4.sha1加密
 
-		String temp = getSha1(sb.toString());
+        String temp = getSha1(sb.toString());
 
-		// 5.将加密后的字符串，与微信传来的加密签名比较，返回结果
+        // 5.将加密后的字符串，与微信传来的加密签名比较，返回结果
 
-		return temp.equals(signature);
+        return temp.equals(signature);
 
-	}
+    }
 
-	public static String getSha1(String str) {
+    public static String getSha1(String str) {
 
-		if (str == null || str.length() == 0) {
+        if (str == null || str.length() == 0) {
 
-			return null;
+            return null;
 
-		}
+        }
 
-		char hexDigits[] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+        char hexDigits[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
 
-				'a', 'b', 'c', 'd', 'e', 'f' };
+                'a', 'b', 'c', 'd', 'e', 'f'};
 
-		try {
+        try {
 
-			MessageDigest mdTemp = MessageDigest.getInstance("SHA1");
+            MessageDigest mdTemp = MessageDigest.getInstance("SHA1");
 
-			mdTemp.update(str.getBytes("UTF-8"));
+            mdTemp.update(str.getBytes("UTF-8"));
 
-			byte[] md = mdTemp.digest();
+            byte[] md = mdTemp.digest();
 
-			int j = md.length;
+            int j = md.length;
 
-			char buf[] = new char[j * 2];
+            char buf[] = new char[j * 2];
 
-			int k = 0;
+            int k = 0;
 
-			for (int i = 0; i < j; i++) {
+            for (int i = 0; i < j; i++) {
 
-				byte byte0 = md[i];
+                byte byte0 = md[i];
 
-				buf[k++] = hexDigits[byte0 >>> 4 & 0xf];
+                buf[k++] = hexDigits[byte0 >>> 4 & 0xf];
 
-				buf[k++] = hexDigits[byte0 & 0xf];
+                buf[k++] = hexDigits[byte0 & 0xf];
 
-			}
+            }
 
-			return new String(buf);
+            return new String(buf);
 
-		} catch (Exception e) {
+        } catch (Exception e) {
 
             e.printStackTrace();
-			return null;
+            return null;
 
-		}
+        }
 
-	}
+    }
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package com.chenmeikai.controller;
 
@@ -14,32 +14,31 @@ import com.chenmeikai.util.WeixinCheckUtils;
 
 /**
  * 微信公众号校验
- * 
+ *
  * @author Administrator
- * 
  */
 
 @Controller
 @RequestMapping("weixin")
 public class WeixinVilidataController {
 
-	@RequestMapping("validata")
-	@ResponseBody
-	public String validata(HttpServletRequest request, HttpServletResponse response) {
+    @RequestMapping("validata")
+    @ResponseBody
+    public String validata(HttpServletRequest request, HttpServletResponse response) {
 
-		String signature = request.getParameter("signature");
+        String signature = request.getParameter("signature");
 
-		String timestamp = request.getParameter("timestamp");
+        String timestamp = request.getParameter("timestamp");
 
-		String nonce = request.getParameter("nonce");
+        String nonce = request.getParameter("nonce");
 
-		String echostr = request.getParameter("echostr");
+        String echostr = request.getParameter("echostr");
 
-		if (WeixinCheckUtils.checkSignature(signature, timestamp, nonce)) {
-			// 如果校验成功，将得到的随机字符串原路返回
-			return echostr;
-		}
-		return "refuse";
-	}
+        if (WeixinCheckUtils.checkSignature(signature, timestamp, nonce)) {
+            // 如果校验成功，将得到的随机字符串原路返回
+            return echostr;
+        }
+        return "refuse";
+    }
 
 }

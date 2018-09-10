@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.chenmeikai</groupId>
-	<artifactId>aggregator</artifactId>
-	<version>1.0</version>
-	<packaging>pom</packaging>
+    <groupId>com.chenmeikai</groupId>
+    <artifactId>aggregator</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
 
-	<name>kenhome</name>
-	<description>Aggregator project</description>
+    <name>kenhome</name>
+    <description>Aggregator project</description>
 
-	<parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.10.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	
-	<!-- 模块说明：这里声明多个子模块 -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.10.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- 模块说明：这里声明多个子模块 -->
     <modules>
         <module>kenhome-common</module>
         <module>kenhome-client</module>
@@ -26,35 +26,35 @@
         <module>kenhome-manager</module>
     </modules>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
-	
-   <dependencyManagement>  
-	<dependencies>
-		<!-- 管理模块 -->
-		 <dependency>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- 管理模块 -->
+            <dependency>
                 <groupId>com.chenmeikai</groupId>
                 <artifactId>kenhome-common</artifactId>
                 <version>1.0</version>
-         </dependency>
-		 <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.chenmeikai</groupId>
                 <artifactId>kenhome-client</artifactId>
                 <version>1.0</version>
-         </dependency>
-		 <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.chenmeikai</groupId>
                 <artifactId>kenhome-mobile</artifactId>
                 <version>1.0</version>
-         </dependency>
-		 <dependency>
+            </dependency>
+            <dependency>
                 <groupId>com.chenmeikai</groupId>
                 <artifactId>kenhome-manager</artifactId>
                 <version>1.0</version>
-         </dependency>
-	</dependencies>
- </dependencyManagement>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 </project>
